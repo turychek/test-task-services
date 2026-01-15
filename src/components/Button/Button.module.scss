@@ -1,0 +1,37 @@
+@use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
+
+.button {
+  border: none;
+  border-radius: $radius-sm;
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &.primary {
+    background: linear-gradient(180deg, $accent, $accent-hover);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(255, 122, 0, 0.4);
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  &.secondary {
+    background: #0b5ed7;
+    color: #fff;
+  }
+
+  &.outline {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  @include tablet {
+    padding: 16px 28px;
+  }
+}

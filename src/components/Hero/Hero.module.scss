@@ -1,0 +1,151 @@
+@use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
+
+.hero {
+  color: $text-main;
+
+  .inner {
+    position: relative;
+    z-index: 2;
+    padding: 30px 16px 0;
+    max-width: 100%;
+  }
+
+  .mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      height: 300px;
+      flex-shrink: 0;
+    }
+  }
+
+  .content {
+    max-width: 520px;
+
+    h1 {
+      font-size: 26px;
+      line-height: 1.2;
+      margin: 0 0 10px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      color: $text-muted;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+
+    button {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+
+      svg {
+        fill: white;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    :nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      color: white;
+      border-color: $dark;
+      box-shadow: 0 0 20px rgba(2, 9, 51, 0.54);
+      background-color: #041a2fdc;
+
+      p {
+        font-weight: 400;
+        font-size: 0.8rem;
+      }
+
+      .phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  @include tablet {
+    .inner {
+      padding: 40px 40px 0;
+    }
+
+    .mainBlock {
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        height: 350px;
+      }
+    }
+
+    .content {
+      h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+
+      button {
+        flex: 1;
+      }
+    }
+  }
+
+  @include desktop {
+    .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .mainBlock {
+      gap: 60px;
+
+      img {
+        width: 400px;
+        height: 450px;
+      }
+    }
+
+    .content {
+      max-width: 720px;
+
+      h1 {
+        font-size: 46px;
+        line-height: 1.2;
+        margin: 0 0 20px;
+      }
+
+      p {
+        font-size: 32px;
+      }
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  color: $text-main;
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .icon {
+    font-size: 34px;
+  }
+
+  .title {
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@include tablet {
+  .card {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include desktop {
+  .card {
+    img {
+      width: 230px;
+      height: 250px;
+    }
+
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use './variables';
+
+body {
+  font-family: variables.$font-main;
+  background-color: variables.$bg;
+  color: white;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
