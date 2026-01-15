@@ -10,8 +10,8 @@
   color: $text-main;
 
   img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
   }
 
   .icon {
@@ -28,8 +28,8 @@
 @include tablet {
   .card {
     img {
-      width: 200px;
-      height: 200px;
+      width: 60px;
+      height: 60px;
     }
 
     .title {
@@ -40,11 +40,6 @@
 
 @include desktop {
   .card {
-    img {
-      width: 230px;
-      height: 250px;
-    }
-
     .title {
       font-size: 1.5rem;
     }
